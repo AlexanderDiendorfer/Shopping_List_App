@@ -1,0 +1,125 @@
+$colors: (primary: #4759b7, accent: #dadbe2);
+
+@function color($color-name) {
+	@return map-get($colors, $color-name);
+}
+@media (min-width: 1000px) {
+	aside {
+		display: block !important;
+		height: 100vh;
+	}
+
+	.sidebar-top {
+		display: block !important;
+		background-color: #cbcde5;
+		height: 230px;
+		border: 1px solid grey;
+	}
+
+	.sidebar-bottom {
+		display: block !important;
+		background-color: #dadbe2;
+		border: 1px solid grey;
+	}
+	.sidebar-top + .sidebar-bottom {
+		height: 100%;
+	}
+
+	.navbar-body {
+		display: none;
+	}
+	.navbar-toggler-icon {
+		display: none;
+	}
+	.navbar .navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	}
+
+	.navbar .navbar-collapse {
+		text-align: left;
+	}
+}
+
+aside {
+	display: none;
+}
+
+.sidebar-bottom {
+	display: none;
+}
+
+.sidebar-top {
+	display: none;
+}
+
+.dot {
+	height: 50px;
+	width: 50px;
+	background-color: #fff;
+	border: 1px solid color(accent);
+	border-radius: 100%;
+	display: inline-block;
+	margin-top: 22.5%;
+	margin-left: 40%;
+}
+
+.wrapper {
+	display: flex;
+	align-items: stretch;
+	height: 100%;
+}
+
+#sidebar {
+	min-width: 250px;
+	max-width: 250px;
+	background: color(accent);
+	height: 100%;
+}
+
+#sidebar.active {
+	margin-left: -250px;
+}
+.navbar {
+	background-color: color(primary) !important;
+}
+.navbar-body {
+	background-color: color(accent) !important;
+	border: 1px solid black;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+}
+.fa-plus {
+	color: green;
+}
+.fa-shopping-cart {
+	color: white;
+}
+
+.fa-user {
+	color: white;
+}
+
+.toolbar {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.header {
+	font-size: 120%;
+	font-weight: bold;
+}
+.nav-link {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #707070 !important;
+	font-size: 120%;
+	margin-bottom: 0px;
+}
+hr {
+	width: 35%;
+}
