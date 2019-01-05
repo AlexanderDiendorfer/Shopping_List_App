@@ -1,0 +1,191 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+@media (min-width: 1000px) {
+    aside {
+        display: block !important;
+        height: 100vh;
+    }
+
+    .sidebar-top {
+        display: block !important;
+        background-color: #cbcde5;
+        height: 230px;
+        border: 1px solid grey;
+    }
+
+    .sidebar-bottom {
+        display: block !important;
+        background-color: #dadbe2;
+        border: 1px solid grey;
+    }
+
+    .sidebar-top + .sidebar-bottom {
+        height: 100%;
+    }
+
+    .navbar-body {
+        display: none;
+    }
+
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: left;
+    }
+}
+
+aside {
+    display: none;
+}
+
+.sidebar-bottom {
+    display: none;
+}
+
+.sidebar-top {
+    display: none;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border: 1px solid #dadbe2;
+    border-radius: 100%;
+    display: inline-block;
+    margin-top: 22.5%;
+    margin-left: 40%;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    height: 100%;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #dadbe2;
+    height: 100%;
+}
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+.navbar {
+    background-color: #4759b7 !important;
+}
+
+.navbar-body {
+    background-color: #dadbe2 !important;
+    border: 1px solid black;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.fa-plus {
+    color: green;
+}
+
+.fa-shopping-cart {
+    color: white;
+}
+
+.fa-user {
+    color: white;
+}
+
+.toolbar {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #707070 !important;
+    font-size: 120%;
+    margin-bottom: 0px;
+}
+
+hr {
+    width: 35%;
+}
+/*# sourceMappingURL=main.css.map */
