@@ -1,5 +1,54 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+@media (min-width: 1000px) {
+    aside {
+        display: block !important;
+        height: 100vh;
+    }
+
+    .sidebar-top {
+        display: block !important;
+        background-color: #cbcde5;
+        height: 230px;
+        border: 1px solid grey;
+    }
+
+    .sidebar-bottom {
+        display: block !important;
+        background-color: #dadbe2;
+        border: 1px solid grey;
+    }
+    main.pb-3 {
+        display: block !important;
+        float:right;
+        position:absolute;
+        left: 25%;
+        top: 5%;
+        width:60%;
+    }
+
+    .navbar-body {
+        display: none;
+    }
+
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    button.navbar-toggler {
+        visibility: hidden;
+    }
+
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: left;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: left;
+    }
+}
 
 a.navbar-brand {
   white-space: normal;
@@ -41,6 +90,7 @@ html {
   min-height: 100%;
 }
 
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
@@ -56,19 +106,19 @@ body {
 }
 @media (min-width: 1000px) {
     aside {
-        display: block !important;
+        display: block;
         height: 100vh;
     }
 
     .sidebar-top {
-        display: block !important;
+        display: block;
         background-color: #cbcde5;
         height: 230px;
         border: 1px solid grey;
     }
 
     .sidebar-bottom {
-        display: block !important;
+        display: block;
         background-color: #dadbe2;
         border: 1px solid grey;
     }
