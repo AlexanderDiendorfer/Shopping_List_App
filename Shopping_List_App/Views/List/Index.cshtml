@@ -4,14 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-<ul>
+@*<ul>
     @foreach (List list in @Model)
     {
         <li>
             @Html.ActionLink(list.Title, "Index", "ListItem", new {  listId = list.Id }, null)
         </li>
     }
-</ul>
+</ul>*@
+<h4 class="mt-5">Einkaufslisten</h4>
 
 <hr />
 <table class="table table-hover">
@@ -23,26 +24,30 @@
             <th>
                 @Html.DisplayNameFor(model => model.UserId)
             </th>
-            <th><a asp-action="AddOrEdit" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Einkaufsliste </a></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
+    
         <tr>
             <td>
+                @Html.ActionLink(item.Title, "Index", "ListItem", new { listId = item.Id }, null)
+            </td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UserId)
-            </td>
+            </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.ListItems);
-            </td>
-            <td>
-                <a href="/ListItem"><i class="fa fa-marker fa-lg"></i></a>foreach
-                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Wollen Sie diese Liste wirklich löschen?')" ><i class="fa fa-trash-alt fa-lg"></i></a>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-cog fa-lg mr-5"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger" onclick="return confirm('Wollen Sie diese Liste wirklich löschen?')"><i class="fa fa-trash-alt fa-lg"></i></a>
             </td>
         </tr>
-}
+        }
+        <tr>
+            <td colspan="3" class="text-center"><a asp-action="AddOrEdit"><i class="fas fa-plus"></i></a></td>
+        </tr>
     </tbody>
 </table>

@@ -4,21 +4,18 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="mt-5">Items</h1>
 
-<ul>
+@*<ul>
     @foreach (ListItem listitem in @Model)
     {
         <li>
             @Html.ActionLink(listitem.Title, "Details", new { id  = listitem.ListId })
         </li>
     }
-</ul>
+</ul>*@
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
@@ -37,7 +34,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
@@ -58,5 +56,11 @@
             </td>
         </tr>
 }
-    </tbody>
+        <tr>
+            <td colspan="7" class="text-center">
+                <a asp-action="Create"><i class="fas fa-plus"></i></a>
+            </td>
+                
+        </tr>
+</tbody>
 </table>

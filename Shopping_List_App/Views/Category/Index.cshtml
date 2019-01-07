@@ -4,40 +4,44 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="mt-5">Kategorien</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
-            <th>
+            <th scope="col">
                 Kategorie
                 @*@Html.DisplayNameFor(model => model.Title)*@
             </th>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Icon)
             </th>
-            <th>
+            <th scope="col">
                 Status
             </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Icon)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-cog fa-lg mr-3"></i></a><b>|</b>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i style="color: #D8000C;" class="fas fa-times fa-lg ml-3"></i></a>
+                </td>
+            </tr>
+        }
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Icon)
-            </td>
-            <td>
-                <a asp-action="Delete" asp-route-id="@item.Id"><i style="color: #D8000C;" class="fas fa-times fa-lg mr-3"></i></a><b>|</b>
-                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-cog fa-lg ml-3"></i></a>
+            <td colspan="3" class="text-center">
+                <a asp-action="Create"><i style="color: #008000;" class="fas fa-plus fa-lg"></i></a>
             </td>
         </tr>
-}
+
     </tbody>
 </table>
