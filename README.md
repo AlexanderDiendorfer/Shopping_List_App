@@ -4,6 +4,7 @@ ShoppingList App using ASP. NET Core, Razor Pages and Bootstrap with Code first 
 ## Requirements
 * .NET Core 2.2 - https://dotnet.microsoft.com/download/dotnet-core/2.2
 * EntityFrameWork Core NuGet - https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
+* SqlLocalDB - https://www.microsoft.com/en-us/download/confirmation.aspx?id=29062
 
 ## Setup
 1. Change the Property value of the property DefaultConnection in appsettings.json,
